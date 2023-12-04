@@ -1,23 +1,5 @@
-# node-typescript-jest-boilerplate
+# Nick's Advent of Code 2023
 
-Boilerplate for a node server or library written in typescript, using jest as
-the test runner.
+Bootstrapped from [node-typescript-jest-boilerplate]<https://github.com/bschlenk/node-typescript-jest-boilerplate>
 
-## Usage
-
-Clone the boilerplate as a new project:
-
-```bash
-git clone https://github.com/bschlenk/node-typescript-jest-boilerplate.git <project>
-```
-
-Update [package.json](package.json) as you see fit.
-
-## Modifications
-
-If this is for a library only, then chances are you don't need nodemon. You can
-make the following changes to remove it:
-
-- Delete `nodemon.json`
-- Remove `watch` from `package.json` scripts
-- Remove `nodemon` from `package.json` devDependencies
+[Day 01]<https://github.com/nickolu/advent-of-code-2023/tree/main/src/day-01>
