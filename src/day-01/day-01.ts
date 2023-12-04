@@ -1,8 +1,6 @@
-import importTextFromFile from '../utils/importTextFromFile';
-
 const isNumberPredicate = (char: string) => !isNaN(Number(char));
 
-export function parseFirstAndLastNumberFromText(text: string) {
+export function getNumberForEntry(text: string) {
   text = text.trim();
   const char1 = getFirstNumberFromText(text);
   const char2 = getFirstNumberFromText(text.split('').reverse().join(''));
@@ -14,14 +12,11 @@ export function getFirstNumberFromText(text: string) {
   return text.split('').filter(isNumberPredicate)[0] || '';
 }
 
-export default function day01(sampleInput: string): number {
-  let total = 0;
-  sampleInput.split('\n').forEach((lineText) => {
-    total += parseFirstAndLastNumberFromText(lineText);
-  });
-  return total;
+export default function day01(input: string): number {
+  const lines = input.split('\n');
+
+  return lines.reduce(
+    (total, lineText) => (total += getNumberForEntry(lineText)),
+    0,
+  );
 }
-
-const realInput = importTextFromFile(__dirname, 'day-01.input.txt');
-
-console.log(day01(realInput));
