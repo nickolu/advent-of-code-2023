@@ -12,11 +12,8 @@ export function getFirstNumberFromText(text: string) {
   return text.split('').filter(isNumberPredicate)[0] || '';
 }
 
-export default function day01(input: string): number {
+export default function solution(input: string): number {
   const lines = input.split('\n');
 
-  return lines.reduce(
-    (total, lineText) => (total += getNumberForEntry(lineText)),
-    0,
-  );
+  return lines.reduce((total, line) => (total += getNumberForEntry(line)), 0);
 }

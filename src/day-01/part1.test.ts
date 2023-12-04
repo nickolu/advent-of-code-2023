@@ -1,7 +1,7 @@
 import importTextFromFile from '../utils/importTextFromFile';
-import day01, { getFirstNumberFromText, getNumberForEntry } from './day-01';
+import solution, { getFirstNumberFromText, getNumberForEntry } from './part1';
 
-describe('Day 01', () => {
+describe('Day 01 - Part 1', () => {
   test('parseText should return the number from the given text', () => {
     expect(getNumberForEntry('he11o')).toEqual(11);
     expect(getNumberForEntry('1asdfa3asdafs5')).toEqual(15);
@@ -23,10 +23,10 @@ describe('Day 01', () => {
 
     const expectedResult = 142;
 
-    expect(day01(sampleInput)).toEqual(expectedResult);
+    expect(solution(sampleInput)).toEqual(expectedResult);
   });
   it('should return the correct value for the real input', () => {
-    const realInput = importTextFromFile(__dirname, 'day-01.input.txt');
-    console.log(day01(realInput));
+    const realInput = importTextFromFile(__dirname, 'part1.input.txt');
+    expect(solution(realInput)).toBe(54390);
   });
 });
