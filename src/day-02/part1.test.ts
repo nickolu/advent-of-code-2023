@@ -8,7 +8,7 @@ Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green`;
 
 describe('Day 01 - Part 1', () => {
-  it.skip('should construct classes', () => {
+  it('should construct classes', () => {
     const game = new Game(
       'Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green',
     );

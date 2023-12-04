@@ -9,7 +9,7 @@ export class Game {
   }
 }
 
-class GameSet {
+export class GameSet {
   red: number;
   blue: number;
   green: number;
@@ -40,7 +40,7 @@ class GamePull {
   }
 }
 
-interface GameSetLimit {
+export interface GameSetLimit {
   red: number;
   blue: number;
   green: number;
